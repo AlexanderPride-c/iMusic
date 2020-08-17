@@ -13,6 +13,8 @@
 		2EB8D6C024EA957200F9E4A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB8D6BE24EA957200F9E4A4 /* Main.storyboard */; };
 		2EB8D6C224EA957500F9E4A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB8D6C124EA957500F9E4A4 /* Assets.xcassets */; };
 		2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB8D6C324EA957500F9E4A4 /* LaunchScreen.storyboard */; };
+		2EB8D6CF24EA9D9400F9E4A4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */; };
+		2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2EB8D6C124EA957500F9E4A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EB8D6C424EA957500F9E4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EB8D6C624EA957500F9E4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				2EB8D6B824EA957200F9E4A4 /* AppDelegate.swift */,
 				2EB8D6BA24EA957200F9E4A4 /* SceneDelegate.swift */,
 				2EB8D6BC24EA957200F9E4A4 /* ViewController.swift */,
+				2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */,
+				2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */,
 				2EB8D6BE24EA957200F9E4A4 /* Main.storyboard */,
 				2EB8D6C124EA957500F9E4A4 /* Assets.xcassets */,
 				2EB8D6C324EA957500F9E4A4 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB8D6CF24EA9D9400F9E4A4 /* SearchViewController.swift in Sources */,
 				2EB8D6BD24EA957200F9E4A4 /* ViewController.swift in Sources */,
+				2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */,
 				2EB8D6B924EA957200F9E4A4 /* AppDelegate.swift in Sources */,
 				2EB8D6BB24EA957200F9E4A4 /* SceneDelegate.swift in Sources */,
 			);
