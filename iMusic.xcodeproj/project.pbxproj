@@ -15,6 +15,7 @@
 		2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB8D6C324EA957500F9E4A4 /* LaunchScreen.storyboard */; };
 		2EB8D6CF24EA9D9400F9E4A4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */; };
 		2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */; };
+		2EE67AD024EAAC80004C0493 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2EE67ACF24EAAC80004C0493 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2EB8D6C624EA957500F9E4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2EE67ACF24EAAC80004C0493 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		2EB8D6AC24EA957200F9E4A4 = {
 			isa = PBXGroup;
 			children = (
+				2EE67ACF24EAAC80004C0493 /* .gitignore */,
 				2EB8D6B724EA957200F9E4A4 /* iMusic */,
 				2EB8D6B624EA957200F9E4A4 /* Products */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EE67AD024EAAC80004C0493 /* .gitignore in Resources */,
 				2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */,
 				2EB8D6C224EA957500F9E4A4 /* Assets.xcassets in Resources */,
 				2EB8D6C024EA957200F9E4A4 /* Main.storyboard in Resources */,
