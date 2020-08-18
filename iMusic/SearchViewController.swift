@@ -8,36 +8,62 @@
 
 import UIKit
 
-class SearchViewController: UITableViewController {
+struct TrackModel {
+    var trackName: String
+    var artistName: String
+}
 
+class SearchViewController: UITableViewController {
+    
+    let searchController = UISearchController(searchResultsController: nil)
+
+    let tracks = [TrackModel(trackName: "idiosyncrasy", artistName: "Korn"),
+                  TrackModel(trackName: "Can You Hear Me", artistName: "Korn")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        
+        setupSearchBar()
     
+    }
+    
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return tracks.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
 
-        // Configure the cell...
+        let track = tracks[indexPath.row]
+        cell.textLabel?.text = "\(track.trackName)\n\(track.artistName)"
+        cell.textLabel?.numberOfLines = 2
+        
+        cell.imageView?.image = #imageLiteral(resourceName: "korn")
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -84,4 +110,11 @@ class SearchViewController: UITableViewController {
     }
     */
 
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
 }
