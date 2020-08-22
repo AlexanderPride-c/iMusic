@@ -15,6 +15,7 @@
 		2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB8D6C324EA957500F9E4A4 /* LaunchScreen.storyboard */; };
 		2EB8D6CF24EA9D9400F9E4A4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */; };
 		2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */; };
+		2EC7DD0024F1430600BBD18A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7DCFF24F1430600BBD18A /* NetworkService.swift */; };
 		2EE67AD024EAAC80004C0493 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2EE67ACF24EAAC80004C0493 /* .gitignore */; };
 		2EF433EC24ED801400ED63DD /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF433EB24ED801400ED63DD /* SearchResponse.swift */; };
 		F9EFDDCC4811471114510C3C /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */; };
@@ -31,6 +32,7 @@
 		2EB8D6C624EA957500F9E4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2EC7DCFF24F1430600BBD18A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2EE67ACF24EAAC80004C0493 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2EF433EB24ED801400ED63DD /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				2EB8D6BA24EA957200F9E4A4 /* SceneDelegate.swift */,
 				2EB8D6BC24EA957200F9E4A4 /* ViewController.swift */,
 				2EB8D6D024EA9FD700F9E4A4 /* MainTabBarController.swift */,
+				2EC7DCFF24F1430600BBD18A /* NetworkService.swift */,
 				2EB8D6CE24EA9D9400F9E4A4 /* SearchViewController.swift */,
 				2EF433EB24ED801400ED63DD /* SearchResponse.swift */,
 				2EB8D6BE24EA957200F9E4A4 /* Main.storyboard */,
@@ -225,6 +228,7 @@
 				2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */,
 				2EB8D6B924EA957200F9E4A4 /* AppDelegate.swift in Sources */,
 				2EB8D6BB24EA957200F9E4A4 /* SceneDelegate.swift in Sources */,
+				2EC7DD0024F1430600BBD18A /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
