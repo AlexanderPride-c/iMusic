@@ -14,8 +14,10 @@ protocol SearchBusinessLogic {
 
 class SearchInteractor: SearchBusinessLogic {
 
+    var networkingService = NetworkService()
   var presenter: SearchPresentationLogic?
   var service: SearchService?
+   
   
   func makeRequest(request: Search.Model.Request.RequestType) {
     if service == nil {
@@ -25,9 +27,12 @@ class SearchInteractor: SearchBusinessLogic {
     switch request {
     case .some:
         print("interactor .some")
-    case .getTracks:
+    case .getTracks(let searchTerm):
         print("interactor .getTracks")
-        presenter?.presentData(response: Search.Model.Response.ResponseType.presentTracks)
+        networkingService.fetchTracks(searchText: searchTerm) { [weak self] (searchResponse) in
+            self?.presenter?.presentData(response: Search.Model.Response.ResponseType.presentTracks(searchResponse: searchResponse))
+        }
+        
     }
   }
   
