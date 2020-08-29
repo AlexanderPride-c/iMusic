@@ -26,6 +26,8 @@
 		2EC88CE924F1607C0020011E /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC88CE224F1607C0020011E /* SearchInteractor.swift */; };
 		2EE67AD024EAAC80004C0493 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2EE67ACF24EAAC80004C0493 /* .gitignore */; };
 		2EF433EC24ED801400ED63DD /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF433EB24ED801400ED63DD /* SearchResponse.swift */; };
+		2EFC530B24FA29200055C983 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EFC530A24FA29200055C983 /* TrackCell.xib */; };
+		2EFC530D24FA29370055C983 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC530C24FA29370055C983 /* TrackCell.swift */; };
 		F9EFDDCC4811471114510C3C /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		2EC88CE224F1607C0020011E /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		2EE67ACF24EAAC80004C0493 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2EF433EB24ED801400ED63DD /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		2EFC530A24FA29200055C983 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		2EFC530C24FA29370055C983 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA053260DA5E85886C8540C /* Pods-iMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.debug.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		DD77D7C867B45B783F2E4EF6 /* Pods-iMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.release.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +110,6 @@
 				2EB8D6BC24EA957200F9E4A4 /* ViewController.swift */,
 				2EB8D6CE24EA9D9400F9E4A4 /* SearchMusicViewController.swift */,
 				2EB5F1F424F196B3007D127F /* Helpers */,
-				2EF433EB24ED801400ED63DD /* SearchResponse.swift */,
 				2EB8D6BE24EA957200F9E4A4 /* Main.storyboard */,
 				2EB8D6C124EA957500F9E4A4 /* Assets.xcassets */,
 				2EB8D6C324EA957500F9E4A4 /* LaunchScreen.storyboard */,
@@ -118,6 +121,7 @@
 		2EC88CD424F15E3C0020011E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2EFC530E24FA3B8A0055C983 /* Models */,
 				2EC7DCFF24F1430600BBD18A /* NetworkService.swift */,
 			);
 			path = Services;
@@ -126,6 +130,7 @@
 		2EC88CDC24F15FAF0020011E /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2EFC530924FA29050055C983 /* Cell */,
 				2EB5F1F224F19478007D127F /* SearchViewController.storyboard */,
 				2EC88CE124F1607C0020011E /* SearchViewController.swift */,
 				2EC88CE224F1607C0020011E /* SearchInteractor.swift */,
@@ -136,6 +141,23 @@
 			);
 			name = Search;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		2EFC530924FA29050055C983 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2EFC530A24FA29200055C983 /* TrackCell.xib */,
+				2EFC530C24FA29370055C983 /* TrackCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2EFC530E24FA3B8A0055C983 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EF433EB24ED801400ED63DD /* SearchResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E1C02482F30EFD024025CB40 /* Pods */ = {
@@ -218,6 +240,7 @@
 				2EE67AD024EAAC80004C0493 /* .gitignore in Resources */,
 				2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */,
 				2EB8D6C224EA957500F9E4A4 /* Assets.xcassets in Resources */,
+				2EFC530B24FA29200055C983 /* TrackCell.xib in Resources */,
 				2EB8D6C024EA957200F9E4A4 /* Main.storyboard in Resources */,
 				2EB5F1F324F19478007D127F /* SearchViewController.storyboard in Resources */,
 			);
@@ -277,6 +300,7 @@
 				2EB8D6BD24EA957200F9E4A4 /* ViewController.swift in Sources */,
 				2EF433EC24ED801400ED63DD /* SearchResponse.swift in Sources */,
 				2EC88CE924F1607C0020011E /* SearchInteractor.swift in Sources */,
+				2EFC530D24FA29370055C983 /* TrackCell.swift in Sources */,
 				2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */,
 				2EB8D6B924EA957200F9E4A4 /* AppDelegate.swift in Sources */,
 				2EC88CE524F1607C0020011E /* SearchWorker.swift in Sources */,
