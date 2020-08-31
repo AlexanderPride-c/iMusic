@@ -29,6 +29,8 @@
 		2EFC530B24FA29200055C983 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EFC530A24FA29200055C983 /* TrackCell.xib */; };
 		2EFC530D24FA29370055C983 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC530C24FA29370055C983 /* TrackCell.swift */; };
 		2EFC531124FD46100055C983 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC531024FD46100055C983 /* FooterView.swift */; };
+		2EFC531424FD5A590055C983 /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EFC531324FD5A590055C983 /* TrackDetailView.xib */; };
+		2EFC531624FD5A680055C983 /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC531524FD5A680055C983 /* TrackDetailView.swift */; };
 		F9EFDDCC4811471114510C3C /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		2EFC530A24FA29200055C983 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		2EFC530C24FA29370055C983 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		2EFC531024FD46100055C983 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		2EFC531324FD5A590055C983 /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		2EFC531524FD5A680055C983 /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		35CF970312A6E3684DFCEBC9 /* Pods_iMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA053260DA5E85886C8540C /* Pods-iMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.debug.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		DD77D7C867B45B783F2E4EF6 /* Pods-iMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.release.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		2EC88CDC24F15FAF0020011E /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2EFC531224FD5A370055C983 /* TrackDetailView */,
 				2EFC530F24FD45FC0055C983 /* FooterView */,
 				2EFC530924FA29050055C983 /* Cell */,
 				2EB5F1F224F19478007D127F /* SearchViewController.storyboard */,
@@ -169,6 +174,15 @@
 				2EFC531024FD46100055C983 /* FooterView.swift */,
 			);
 			path = FooterView;
+			sourceTree = "<group>";
+		};
+		2EFC531224FD5A370055C983 /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2EFC531324FD5A590055C983 /* TrackDetailView.xib */,
+				2EFC531524FD5A680055C983 /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
 			sourceTree = "<group>";
 		};
 		E1C02482F30EFD024025CB40 /* Pods */ = {
@@ -248,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFC531424FD5A590055C983 /* TrackDetailView.xib in Resources */,
 				2EE67AD024EAAC80004C0493 /* .gitignore in Resources */,
 				2EB8D6C524EA957500F9E4A4 /* LaunchScreen.storyboard in Resources */,
 				2EB8D6C224EA957500F9E4A4 /* Assets.xcassets in Resources */,
@@ -321,6 +336,7 @@
 				2EC88CE724F1607C0020011E /* SearchModels.swift in Sources */,
 				2EB8D6BB24EA957200F9E4A4 /* SceneDelegate.swift in Sources */,
 				2EC88CE424F1607C0020011E /* SearchPresenter.swift in Sources */,
+				2EFC531624FD5A680055C983 /* TrackDetailView.swift in Sources */,
 				2EC7DD0024F1430600BBD18A /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

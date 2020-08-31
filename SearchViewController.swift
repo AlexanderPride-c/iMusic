@@ -104,6 +104,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return 84
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellViewModel = searchViewModel.cells[indexPath.row]
+        print("cellViewModel.trackName", cellViewModel.trackName)
+        
+        let window = UIApplication.shared.keyWindow
+        let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as! TrackDetailView
+        
+        window?.addSubview(trackDetailsView)
+        
+    }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Please inter search term above..."
@@ -115,6 +126,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return searchViewModel.cells.count > 0 ? 0 : 250
     }
+    
+   
     
 }
 
