@@ -108,9 +108,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = searchViewModel.cells[indexPath.row]
         print("cellViewModel.trackName", cellViewModel.trackName)
         
-        let window = UIApplication.shared.keyWindow
+        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
         let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as! TrackDetailView
         trackDetailsView.set(viewModel: cellViewModel)
+        trackDetailsView.delegate = self
         window?.addSubview(trackDetailsView)
         
     }
@@ -142,4 +143,18 @@ extension SearchViewController: UISearchBarDelegate {
             self.interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchTerm: searchText))
         })
     }
+}
+
+extension SearchViewController: TrackMovingDelegate {
+    func moveBackForPreviosTrack() -> SearchViewModel.Cell? {
+        print("go back")
+        return nil
+    }
+    
+    func moveForwardForPreviosTrack() -> SearchViewModel.Cell? {
+        print("go forward")
+        return nil
+    }
+    
+    
 }
