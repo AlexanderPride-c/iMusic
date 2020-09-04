@@ -146,14 +146,35 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 extension SearchViewController: TrackMovingDelegate {
+    
+    func getTrack(isForward: Bool) -> SearchViewModel.Cell? {
+        guard let indexPath = table.indexPathForSelectedRow else { return nil }
+        table.deselectRow(at: indexPath, animated: true)
+        var nextIndexPath: IndexPath!
+        if isForward {
+            nextIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+            if nextIndexPath.row == searchViewModel.cells.count {
+                nextIndexPath.row = 0
+            }
+        } else {
+            nextIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+            if nextIndexPath.row == -1 {
+                nextIndexPath.row = searchViewModel.cells.count
+            }
+        }
+        
+        table.selectRow(at: nextIndexPath, animated: true, scrollPosition: .none)
+        let cellViewModel = searchViewModel.cells[nextIndexPath.row]
+        print("cellViewModel.trackName:", cellViewModel.trackName)
+        return cellViewModel
+    }
+    
     func moveBackForPreviosTrack() -> SearchViewModel.Cell? {
-        print("go back")
-        return nil
+        return getTrack(isForward: false)
     }
     
     func moveForwardForPreviosTrack() -> SearchViewModel.Cell? {
-        print("go forward")
-        return nil
+        return getTrack(isForward: true)
     }
     
     
