@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E475C28250369B900DFDF18 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E475C27250369B900DFDF18 /* Nib.swift */; };
 		2EB5F1F324F19478007D127F /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB5F1F224F19478007D127F /* SearchViewController.storyboard */; };
 		2EB5F1F624F196D2007D127F /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB5F1F524F196D2007D127F /* UIViewController + Storyboard.swift */; };
 		2EB8D6B924EA957200F9E4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB8D6B824EA957200F9E4A4 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E475C27250369B900DFDF18 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
 		2EB5F1F224F19478007D127F /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		2EB5F1F524F196D2007D127F /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
 		2EB8D6B524EA957200F9E4A4 /* iMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 			children = (
 				2EB5F1F524F196D2007D127F /* UIViewController + Storyboard.swift */,
 				2EC71A6D25001AC700998D0A /* CMTime + Extension.swift */,
+				2E475C27250369B900DFDF18 /* Nib.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				2EFC531124FD46100055C983 /* FooterView.swift in Sources */,
 				2EC71A6E25001AC700998D0A /* CMTime + Extension.swift in Sources */,
 				2EFC530D24FA29370055C983 /* TrackCell.swift in Sources */,
+				2E475C28250369B900DFDF18 /* Nib.swift in Sources */,
 				2EB8D6D124EA9FD700F9E4A4 /* MainTabBarController.swift in Sources */,
 				2EB8D6B924EA957200F9E4A4 /* AppDelegate.swift in Sources */,
 				2EC88CE524F1607C0020011E /* SearchWorker.swift in Sources */,
