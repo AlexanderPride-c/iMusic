@@ -24,6 +24,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     private var timer: Timer?
     
     private lazy var footerView = FooterView()
+    weak var tabBarDelegate: MainTabBarControllerDelegate?
     
     
     // MARK: Setup
@@ -39,11 +40,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         presenter.viewController  = viewController
         router.viewController     = viewController
     }
-    
-    // MARK: Routing
-    
-    
-    
+        
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -51,6 +48,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         setup()
         tableViewSetup()
         setupSearchBar()
+        searchBar(searchController.searchBar, textDidChange: "korn")
     }
     
     private func setupSearchBar() {
@@ -61,6 +59,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
     
     func tableViewSetup() {
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
         
         let nib = UINib(nibName: "TrackCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: TrackCell.reusedID)
@@ -108,11 +107,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cellViewModel = searchViewModel.cells[indexPath.row]
         print("cellViewModel.trackName", cellViewModel.trackName)
         
-        let window = UIApplication.shared.windows.first { $0.isKeyWindow }
-        let trackDetailsView: TrackDetailView = TrackDetailView.loadFromNib()
-        trackDetailsView.set(viewModel: cellViewModel)
-        trackDetailsView.delegate = self
-        window?.addSubview(trackDetailsView)
+        self.tabBarDelegate?.maximizedTrackDetailController(viewModel: cellViewModel)
         
     }
     
