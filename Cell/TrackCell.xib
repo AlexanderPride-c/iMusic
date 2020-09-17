@@ -51,21 +51,10 @@
                             <action selector="addTrackButton:" destination="ZKs-F1-d36" eventType="touchUpInside" id="blm-fz-J61"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNK-BJ-urC">
-                        <rect key="frame" x="343" y="30" width="37" height="30"/>
-                        <state key="normal" title="show"/>
-                        <connections>
-                            <action selector="showTrackButton:" destination="ZKs-F1-d36" eventType="touchUpInside" id="DHW-kY-HaB"/>
-                        </connections>
-                    </button>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="UNK-BJ-urC" firstAttribute="top" secondItem="J2y-lD-OVq" secondAttribute="top" constant="30" id="DqN-Oy-MG6"/>
-                    <constraint firstAttribute="trailing" secondItem="UNK-BJ-urC" secondAttribute="trailing" constant="133" id="HT1-dC-qd5"/>
-                    <constraint firstAttribute="bottom" secondItem="UNK-BJ-urC" secondAttribute="bottom" constant="24" id="enW-NZ-hHQ"/>
-                </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addTrackOutlet" destination="B8E-Il-xCJ" id="7kc-bo-f8g"/>
                 <outlet property="artistNameLabel" destination="Wzf-A6-Rgc" id="U3E-e3-dvD"/>
                 <outlet property="collectionNameLabel" destination="HzL-OT-Jln" id="rYZ-cL-9Ie"/>
                 <outlet property="trackImageView" destination="4oI-mr-ocV" id="PcR-W4-6Jb"/>

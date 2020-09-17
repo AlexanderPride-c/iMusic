@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum Search {
    
@@ -42,9 +43,10 @@ class SearchViewModel: NSObject, NSCoding {
     }
     
     // сгенерированный ключ из-за размещения класса в классе
-    @objc(_TtCC6iMusic15SearchViewModel4Cell)class Cell: NSObject, NSCoding {
+    @objc(_TtCC6iMusic15SearchViewModel4Cell)class Cell: NSObject, NSCoding, Identifiable {
         
       
+        var id = UUID()
         var iconUrlString: String?
         var trackName: String
         var collectionName: String?
