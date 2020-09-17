@@ -51,8 +51,20 @@ class TrackCell: UITableViewCell {
     
     @IBAction func addTrackButton(_ sender: Any) {
         let defaults = UserDefaults.standard
+        guard let cell = cell else { return }
+        var listOfTracks = [SearchViewModel.Cell]()
+        if let savedTracks = defaults.object(forKey: "tracks") as? Data {
+            if let decodedTrack = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedTracks) as? [SearchViewModel.Cell] {
+                
+                listOfTracks = decodedTrack
+                
+            }
+        }
+
         
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: cell, requiringSecureCoding: false) {
+        listOfTracks.append(cell)
+        
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: listOfTracks, requiringSecureCoding: false) {
             print("Успешно!")
             defaults.set(savedData, forKey: "tracks")
         }
@@ -60,9 +72,12 @@ class TrackCell: UITableViewCell {
     
     @IBAction func showTrackButton(_ sender: Any) {
         let defaults = UserDefaults.standard
-        if let savedTrack = defaults.object(forKey: "tracks") as? Data {
-            if let decodedTrack = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedTrack) as? SearchViewModel.Cell {
-                print("decodedTrack.trackName: \(decodedTrack.trackName)")
+        if let savedTracks = defaults.object(forKey: "tracks") as? Data {
+            if let decodedTrack = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedTracks) as? [SearchViewModel.Cell] {
+               
+                decodedTrack.map { (track) in
+                    print(track.trackName)
+                }
             }
         }
     }
