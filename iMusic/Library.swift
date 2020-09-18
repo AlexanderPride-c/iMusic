@@ -15,13 +15,16 @@ struct Library: View {
     @State private var showAlert = false
     @State private var track: SearchViewModel.Cell!
     
+    var tabBarDelegate: MainTabBarControllerDelegate?
+    
     var body: some View {
         NavigationView {
             VStack {
                 GeometryReader { geometry in
                     HStack(spacing: 20) {
                         Button(action: {
-                            print("1234455435354")
+                            self.track = self.tracks[0]
+                            self.tabBarDelegate?.maximizedTrackDetailController(viewModel: self.track)
                         }, label: {
                             Image(systemName: "play.fill")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
@@ -31,7 +34,7 @@ struct Library: View {
                         })
                         
                         Button(action: {
-                            print("1234455435354")
+                            self.tracks = UserDefaults.standard.saveTracks()
                         }, label: {
                             Image(systemName: "arrow.2.circlepath")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
@@ -45,11 +48,18 @@ struct Library: View {
                 
                 List {
                     ForEach(tracks) { track in
-                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _tracks in
-                            print("Pressed!")
-                            self.track = track
-                            self.showAlert = true
-                        }))
+                        LibraryCell(cell: track).gesture(LongPressGesture()
+                            .onEnded{ _ in
+                                print("Pressed!")
+                                self.track = track
+                                self.showAlert = true
+                            }
+                            .simultaneously(with: TapGesture()
+                                .onEnded{ _ in
+                                    self.track = track
+                                    self.tabBarDelegate?
+                                        .maximizedTrackDetailController(viewModel: self.track)
+                                }))
                     }.onDelete(perform: delete)
                 }
             }.actionSheet(isPresented: $showAlert, content: { ActionSheet(title: Text("Are you shure you want to delete this track?"), buttons: [.destructive(Text("Delete"), action: {
