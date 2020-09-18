@@ -12,6 +12,8 @@ import URLImage
 struct Library: View {
     
     @State var tracks = UserDefaults.standard.saveTracks()
+    @State private var showAlert = false
+    @State private var track: SearchViewModel.Cell!
     
     var body: some View {
         NavigationView {
@@ -43,17 +45,36 @@ struct Library: View {
                 
                 List {
                     ForEach(tracks) { track in
-                        LibraryCell(cell: track)
+                        LibraryCell(cell: track).gesture(LongPressGesture().onEnded({ _tracks in
+                            print("Pressed!")
+                            self.track = track
+                            self.showAlert = true
+                        }))
                     }.onDelete(perform: delete)
                 }
-            }
+            }.actionSheet(isPresented: $showAlert, content: { ActionSheet(title: Text("Are you shure you want to delete this track?"), buttons: [.destructive(Text("Delete"), action: {
+                print("Deleteing: \(self.track.trackName)")
+                self.delete(track: self.track )
+            }), .cancel()
+            ])
+            })
                 
-            .navigationBarTitle("Library")
+                .navigationBarTitle("Library")
         }
     }
     
     func delete(at offsets: IndexSet) {
         tracks.remove(atOffsets: offsets)
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        }
+    }
+    
+    func delete(track: SearchViewModel.Cell) {
+        let index = tracks.firstIndex(of: track)
+        guard let myIndex = index else { return }
+        tracks.remove(at: myIndex)
         if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
