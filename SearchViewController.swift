@@ -48,7 +48,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         setup()
         tableViewSetup()
         setupSearchBar()
-        searchBar(searchController.searchBar, textDidChange: "korn")
     }
     
     override func viewWillAppear(_ animated: Bool) {
